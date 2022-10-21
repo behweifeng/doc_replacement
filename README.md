@@ -1,5 +1,5 @@
 # doc_replacement
-#### Create multiple word documents with keywords being replaced
+#### Create multiple word documents with keywords being replaced (words in header will be replaced as well)
 
 1. Create a .docx file as a template, giving each of the placeholders a 
 unique name
@@ -10,6 +10,8 @@ unique name
 
 4. Run the following command (where document.docx is your .docx file name and excel.xlsx is your .xlsx file name)
 > python3 test.py document.docx excel.xlsx 
+
+5. The resulting documents will be created as result_.docx 
 
 
 #### Note: you will need to pre-install the following libraries
