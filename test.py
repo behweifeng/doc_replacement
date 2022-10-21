@@ -5,10 +5,14 @@ import sys
 
 def docx_replace_regex(doc_obj, regex , replace): 
 
-    paragraphs = list(doc.paragraphs)
+    paragraphs = list(doc.paragraphs)    
 
-    for h in doc.sections[0].header.tables:
-        for row in h.rows:
+    for hp in doc.sections[0].header.paragraphs:
+        paragraphs.append(hp)
+
+
+    for ht in doc.sections[0].header.tables:
+        for row in ht.rows:
             for cell in row.cells:
                 for paragraph in cell.paragraphs:
                     paragraphs.append(paragraph)
